@@ -294,7 +294,75 @@
             margin: 0;
         }
 
-        /* CERTIFICATIONS */
+       /* GRID PARA PROYECTOS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* PROYECTO PRINCIPAL - OCUPA 3 COLUMNAS */
+        .project-card.featured {
+            grid-column: 1 / -1;
+            background: white;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: grid;
+            grid-template-columns: 2fr;
+            grid-template-rows: auto auto;
+            min-height: 90px;
+        }
+
+        .project-card.featured:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card.featured .project-image {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            order: 1;
+            min-height: 750px;
+        }
+
+        .project-card.featured .project-image iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 700px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .project-card.featured .project-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            order: 2;
+        }
+
+        .project-card.featured h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .project-card.featured p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+                
+        /* CERTIFICATIONS AND PROJECTS */
         #certifications {
             background-color: var(--bg-light);
         }
@@ -636,16 +704,24 @@
     <!-- PROJECTS SECTION -->
     <section id="projects">
         <h2 class="section-title">Proyectos Desarrollados</h2>
-        <div class="certifications-grid">
-            <div class="cert-card">
+        
+         <!-- PROYECTO PRINCIPAL - WHOLESALE RETAIL -->
+            <div class="project-card featured">
                 <div class="project-image">
-    <img src="images/Proyecto 1.png" alt="Dashboard 1" style="width:100%; height:100%; object-fit:cover; border-radius:10px 10px 0 0;">
+                    <iframe title="Análisis Comercial de la empresa Wholsale Retail" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiNjQ2NmMwMTUtMjNkYS00NjI5LTk2YWQtOGJiZTBlMmMyNTM1IiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+                </div>
+                <div class="project-content">
+                    <h3>Análisis Comercial Wholesale Retail</h3>
+                    <p>Proyecto realizado para dar una visión general de la empresa Wholsale Retail, aplicando un análisis de sus principales KPI's comerciales y visualizando la salud de estos en el año 2020.</p>
+                    <p><strong>Empresa:</strong> Ventas de artículos de limpieza</p>
+                    <p><strong>Herramientas:</strong> Power BI, Excel, SQL</p>
+                </div>
             </div>
-                <h3>Análisis Comercial Wholsale Retail</h3>
-                <p><strong>Empresa ventas artículos de limpieza</strong></p>
-                <p>Proyecto realizado para dar una visión general de la empresa Wholsale Retail, aplicando un análisis de sus principales KPI's comerciales y ver la salud de estos en el año 2020.</p>
-                <p class="cert-year"><a href="https://app.powerbi.com/view?r=eyJrIjoiNjQ2NmMwMTUtMjNkYS00NjI5LTk2YWQtOGJiZTBlMmMyNTM1IiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9" target="_blank" style="color: var(--secondary-color); text-decoration: none; font-weight: 600;">Ver Proyecto →</a></p>
-            </div>
+        
+        
+        <div class="certifications-grid">
+            
+            
             <div class="cert-card">
                 <div class="project-image">
     <img src="images/Proyecto 2.png" alt="Dashboard 2" style="width:100%; height:100%; object-fit:cover; border-radius:10px 10px 0 0;">
